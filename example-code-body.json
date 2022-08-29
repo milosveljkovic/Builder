@@ -1,0 +1,6 @@
+{
+  "name": "f1",
+  "description": "f1",
+  "code": "import numbers\nfrom fastapi import FastAPI\nimport uvicorn\nimport os\n\n\napp = FastAPI()\n\n\n@app.get(\"\/\")\ndef read_root():\n    target = os.environ.get(\"TARGET\", \"World\")\n    return \"This is function deployed by builder! Hello {}!\\n\".format(target)\n\n\nif __name__ == \"__main__\":\n    uvicorn.run(app, debug=True, host=\"0.0.0.0\", port=int(os.environ.get(\"PORT\", 8080)))\n",
+  "version": "v1"
+}
