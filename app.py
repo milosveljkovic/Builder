@@ -27,8 +27,7 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
-    subprocess.check_call(["ls"])
-    return "Hello"
+    return "Hello There"
 
 
 @app.get("/kubeinfo")
