@@ -13,10 +13,14 @@ This platform should provide deployment of python services to k8s with `ZERO` ef
 ## Prerequisite
 
 - kubectl
-- minicube with Knative (follow this guide - https://knative.dev/docs/getting-started/)
+- minicube with Knative (follow this guide - https://knative.dev/docs/getting-started/) 
 - buildah (instll buildah using $sudo dnf -y install buildah )
 - sed
 - python3
+
+`minikube start -p knative`
+
+`minikube tunnel --profile knative`
 
 ## What should be done before running a Builder
 
